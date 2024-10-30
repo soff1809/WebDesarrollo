@@ -1,0 +1,151 @@
+/* Estilos comunes */
+body, html {
+    min-height: 3000px; /* Establece una altura mínima de 3000px */
+    margin: 0; /* Elimina márgenes predeterminados */
+    font-family: Arial, sans-serif; /* Aplica fuente Arial o sans-serif */
+    display: flex; /* Centra el contenido usando Flexbox */
+    justify-content: center; /* Alinea el contenido horizontalmente al centro */
+    align-items: top; /* Alinea el contenido verticalmente al centro */
+    background-color: #F4F5EE; /* Color de fondo */
+}
+
+.flex {
+    display: flex; /* Flexbox para alinear los elementos del menú */
+    flex-direction: column; /* Alineación vertical de los elementos */
+    align-items: center; /* Centra los elementos en el eje horizontal */
+    position: relative; /* Posición relativa para ajustar el menú desplegable */
+}
+
+/* Botón en forma de rombo */
+.bttn {
+    width: 100px; /* Ancho del botón */
+    height: 100px; /* Alto del botón */
+    background-color: #00fff2; /* Color de fondo */
+    color: #00583e; /* Color del texto */
+    display: flex; /* Flexbox para alinear el contenido centrado */
+    align-items: center; /* Centra el contenido verticalmente */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    text-transform: uppercase; /* Convierte el texto a mayúsculas */
+    letter-spacing: 1px; /* Espaciado entre letras */
+    text-decoration: none; /* Elimina subrayado del enlace */
+    position: relative; /* Posición relativa para el efecto de transición */
+    border-radius: 10px; /* Esquinas redondeadas para el botón */
+    transition: all 0.5s ease; /* segundos que tarda en realizar la transicion */ 
+    z-index: 1; /* Para que el botón esté por encima del menú inicialmente */
+}
+
+/* Efecto de hover */
+.bttn:hover {
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño del botón */
+    background-color: #000dff; /* Cambia el color de fondo */
+    color: #ffffff; /* Cambia el color del texto */
+}
+
+/* Menú desplegable oculto */
+.menu {
+    display: none; /* Oculto inicialmente */
+    flex-direction: row; /* Alineación horizontal de los enlaces en el menú */
+    position: absolute; /* Posiciona el menú sobre el contenido */
+    top: 0px; /* Posición desde la parte superior */
+    width: 470px; /* Ancho del menú desplegable */
+    padding: 30px; /* Espaciado interno del menú */
+    background-color: #000dff; /* Color de fondo del menú */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Aplicar sombras a los elementos */
+    border-radius: 15px; /* Esquinas redondeadas */
+    opacity: 0; /* Opacidad inicial (invisible) */
+    transform: scale(0.9); /* Escala inicial más pequeña para efecto */
+}
+
+/* Elementos del menú */
+.menu a {
+    padding: 10px 0; /* Espacio vertical alrededor de cada enlace */
+    color: #fff; /* Color blanco del texto */
+    text-decoration: none; /* Para quitar el subrayado de los elementos */
+    transition: background-color 0.3s ease; /* Transición en el cambio de color al hacer hover */
+    text-align: center; /* Centrado del texto */
+    margin-left: 40px; /* Espacio entre los elementos del menú */
+}
+
+.menu a:hover {
+    color: #97ab00; /* Cambia el color del texto en hover */
+}
+
+/* Mostrar el menú cuando el botón es clicado */
+.bttn:focus + .menu,
+.bttn:active + .menu {
+    display: flex; /* Muestra el menú en forma de Flexbox */
+    opacity: 1; /* Establece la opacidad completa para hacerlo visible */
+    transform: scale(1); /* Escala completa */
+}
+
+/* Al hacer clic, el botón se desvanece */
+.bttn:focus {
+    width: 500px; /* Expande el botón al ancho del menú desplegable*/
+    opacity: 0; /* Hace que el botón se desvanezca */
+    pointer-events: none; /* Desactiva los eventos en el botón después de hacer clic */
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    
+}
+
+/* Small devices (landscape phones, entre 576px y 767.98px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+
+}
+
+/* Medium devices (tablets, entre 768px y 991.98px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    
+}
+
+/* Large devices (desktops, entre 992px y 1199.98) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+
+}
+
+/* Extra large devices (large desktops, entre 1200px y 1399.98px) */
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+
+}
+
+/* Extra large devices (large desktops, 1400px and up) */
+@media (min-width: 1400px) {
+    
+}
+
+/*----------------------------------------------------------------*/
+/*----------media queries con min-with----------------------------*/
+/*----------------------------------------------------------------*/
+
+
+
+/* X-Small devices (portrait phones, less than 576px) */
+/* No media query for `xs` since this is the default in Bootstrap */
+
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+  
+}
